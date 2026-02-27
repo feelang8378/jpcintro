@@ -117,3 +117,45 @@ header {
 .color-3 { background: #ff7272; } /* 21-30 */
 .color-4 { background: #aaaaaa; } /* 31-40 */
 .color-5 { background: #b0d840; } /* 41-45 */
+
+/* Inquiry Form Styles */
+.inquiry-section {
+    margin-top: 2rem;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 2px rgba(0, 74, 153, 0.2);
+}
+
+[data-theme="dark"] .inquiry-form input:focus,
+[data-theme="dark"] .inquiry-form textarea:focus {
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.4);
+}

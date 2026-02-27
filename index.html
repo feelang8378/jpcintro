@@ -25,6 +25,23 @@
 
         <button class="lotto-btn" onclick="generateLotto()">번호 추첨하기</button>
     </section>
+
+    <section class="lotto-card inquiry-section" style="margin-top: 2rem;">
+        <h3>🤝 제휴 문의</h3>
+        <p>조종필 교수님과 함께하고 싶다면 메시지를 남겨주세요.</p>
+        <form action="https://formspree.io/f/mqedjzgv" method="POST" class="inquiry-form">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="성함 또는 단체명" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="이메일 주소" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="문의 내용을 입력해주세요" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="lotto-btn">문의 보내기</button>
+        </form>
+    </section>
 </div>
 
 <script src="main.js"></script>
