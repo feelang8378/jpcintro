@@ -1,149 +1,152 @@
 :root {
-    --main-color: #2d5a27; /* 숲의 초록색 느낌 */
-    --accent-color: #d4a373; /* 따뜻한 베이지/나무 느낌 */
-    --bg-color: #fdfaf6; /* 한지/종이 느낌의 연한 미색 */
-    --text-color: #333;
-    --header-text: white;
-    --card-bg: white;
-    --card-shadow: rgba(0,0,0,0.05);
-    --border-color: #e0e0e0;
+    --primary-green: #2ecc71; /* 생생한 잔디색 */
+    --deep-green: #1b5e20; /* 숲의 깊은 색 */
+    --sky-blue: #87ceeb; /* 맑은 하늘색 */
+    --silver: #bdc3c7; /* 세련된 은색 */
+    --pure-white: #ffffff;
+    --soft-gray: #f8f9fa;
+    --text-dark: #2c3e50;
+    --accent-blue: #3498db;
 }
 
 [data-theme="dark"] {
-    --main-color: #1a3c18;
-    --accent-color: #a67c52;
-    --bg-color: #121212;
-    --text-color: #d1d1d1;
-    --header-text: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.4);
-    --border-color: #333;
+    --primary-green: #27ae60;
+    --deep-green: #0d2e10;
+    --sky-blue: #2980b9;
+    --silver: #7f8c8d;
+    --pure-white: #121212;
+    --soft-gray: #1e1e1e;
+    --text-dark: #ecf0f1;
+    --accent-blue: #5dade2;
 }
 
 body {
-    font-family: 'Pretendard', 'Nanum Myeongjo', serif; /* 명조체 계열 선호 */
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: 'Pretendard', sans-serif;
+    background-color: var(--soft-gray);
+    color: var(--text-dark);
     margin: 0;
-    line-height: 1.7;
-    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 header {
-    background-color: var(--main-color);
-    color: var(--header-text);
-    padding: 3rem 1rem;
+    background: linear-gradient(135deg, var(--deep-green), var(--primary-green));
+    color: var(--pure-white);
+    padding: 4rem 1rem;
     text-align: center;
     position: relative;
-    border-bottom: 5px solid var(--accent-color);
+    border-bottom: 4px solid var(--silver);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .container {
-    max-width: 700px;
-    margin: 3rem auto;
+    max-width: 900px;
+    margin: -2rem auto 3rem;
     padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
-/* 카드 공통 스타일 */
-.quote-card, .profile-card, .lotto-card {
-    background: var(--card-bg);
+/* 카드 스타일 */
+.card {
+    background: var(--pure-white);
     padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px var(--card-shadow);
-    margin-bottom: 2.5rem;
-    border: 1px solid var(--border-color);
-}
-
-/* 오늘의 시 스타일 */
-.quote-header {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border: 1px solid rgba(189, 195, 199, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.date-today {
-    font-size: 0.9rem;
-    color: var(--main-color);
-    font-weight: bold;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.quote-content {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.25rem;
-}
-
-.quote-content p {
-    margin-bottom: 1.5rem;
-    line-height: 2;
-}
-
-.quote-content cite {
-    display: block;
-    font-size: 1rem;
-    color: #777;
-    font-style: normal;
-}
-
-/* 프로필 카드 스타일 */
-.profile-card h3 {
-    color: var(--main-color);
+/* 논문 포스트 전용 스타일 */
+.paper-tag {
+    display: inline-block;
+    background: var(--sky-blue);
+    color: var(--pure-white);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-/* 버튼 및 폼 스타일 */
-.lotto-btn {
-    background: var(--main-color);
+.source-link {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    text-decoration: none;
+    display: block;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.swing-point {
+    background: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--primary-green);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.swing-point h4 {
+    margin-top: 0;
+    color: var(--deep-green);
+}
+
+/* 프로필 및 버튼 */
+.profile-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--accent-blue), var(--sky-blue));
     color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
     border: none;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-weight: 700;
     cursor: pointer;
-    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
     transition: 0.3s;
 }
 
-.lotto-btn:hover {
-    filter: brightness(1.2);
-}
-
-.inquiry-form input, .inquiry-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    background: var(--card-bg);
-    color: var(--text-color);
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
 }
 
 /* Theme Toggle */
 .theme-toggle {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
     background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 0.8rem;
+    border: 1px solid var(--silver);
+    color: var(--pure-white);
+    padding: 8px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
 }
 
-/* Footer */
-.site-footer {
-    padding: 3rem 0;
+footer {
+    background: var(--text-dark);
+    color: var(--silver);
+    padding: 3rem 1rem;
     text-align: center;
-    border-top: 1px solid var(--border-color);
-    margin-top: 5rem;
+    font-size: 0.9rem;
 }
