@@ -1,97 +1,132 @@
 :root {
-    --main-color: #004a99;
-    --accent-color: #ffd700;
-    --bg-color: #f9f9f9;
+    --main-color: #2d5a27; /* 숲의 초록색 느낌 */
+    --accent-color: #d4a373; /* 따뜻한 베이지/나무 느낌 */
+    --bg-color: #fdfaf6; /* 한지/종이 느낌의 연한 미색 */
     --text-color: #333;
     --header-text: white;
     --card-bg: white;
-    --card-shadow: rgba(0,0,0,0.1);
-    --border-color: var(--main-color);
+    --card-shadow: rgba(0,0,0,0.05);
+    --border-color: #e0e0e0;
 }
 
 [data-theme="dark"] {
-    --main-color: #1a73e8;
-    --accent-color: #fbbc04;
+    --main-color: #1a3c18;
+    --accent-color: #a67c52;
     --bg-color: #121212;
-    --text-color: #e0e0e0;
+    --text-color: #d1d1d1;
     --header-text: #e0e0e0;
     --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.5);
+    --card-shadow: rgba(0,0,0,0.4);
     --border-color: #333;
 }
 
 body {
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'Pretendard', 'Nanum Myeongjo', serif; /* 명조체 계열 선호 */
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
+    line-height: 1.7;
     transition: background-color 0.3s, color 0.3s;
 }
 
 header {
     background-color: var(--main-color);
     color: var(--header-text);
-    padding: 2rem;
+    padding: 3rem 1rem;
     text-align: center;
     position: relative;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
-/* 로또 섹션 스타일 */
-.lotto-card { 
+/* 카드 공통 스타일 */
+.quote-card, .profile-card, .lotto-card {
     background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px; 
-    box-shadow: 0 10px 20px var(--card-shadow);
-    text-align: center; 
-    border: 2px solid var(--border-color);
-    transition: background-color 0.3s, border-color 0.3s;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--card-shadow);
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
 }
 
-.ball-container {
+/* 오늘의 시 스타일 */
+.quote-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    min-height: 60px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.ball {
-    width: 50px;
-    height: 50px;
-    line-height: 50px; 
-    border-radius: 50%;
-    color: white;
+.date-today {
+    font-size: 0.9rem;
+    color: var(--main-color);
     font-weight: bold;
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
 }
 
+.quote-content {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.quote-content p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+
+.quote-content cite {
+    display: block;
+    font-size: 1rem;
+    color: #777;
+    font-style: normal;
+}
+
+/* 프로필 카드 스타일 */
+.profile-card h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+/* 버튼 및 폼 스타일 */
 .lotto-btn {
     background: var(--main-color);
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    width: 100%;
     transition: 0.3s;
 }
 
 .lotto-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    filter: brightness(1.2);
 }
 
-/* Theme Toggle Button */
+.inquiry-form input, .inquiry-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Theme Toggle */
 .theme-toggle {
     position: absolute;
     top: 1rem;
@@ -99,63 +134,16 @@ header {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 5px 12px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 0.9rem;
-    backdrop-filter: blur(5px);
-    transition: 0.3s;
+    font-size: 0.8rem;
 }
 
-.theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* 공 색상 분기 */
-.color-1 { background: #fbc400; } /* 1-10 */
-.color-2 { background: #69c8f2; } /* 11-20 */
-.color-3 { background: #ff7272; } /* 21-30 */
-.color-4 { background: #aaaaaa; } /* 31-40 */
-.color-5 { background: #b0d840; } /* 41-45 */
-
-/* Inquiry Form Styles */
-.inquiry-section {
-    margin-top: 2rem;
-}
-
-.inquiry-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 1.5rem auto 0;
-}
-
-.form-group {
-    text-align: left;
-}
-
-.inquiry-form input,
-.inquiry-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    font-family: inherit;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-.inquiry-form input:focus,
-.inquiry-form textarea:focus {
-    outline: none;
-    border-color: var(--main-color);
-    box-shadow: 0 0 0 2px rgba(0, 74, 153, 0.2);
-}
-
-[data-theme="dark"] .inquiry-form input:focus,
-[data-theme="dark"] .inquiry-form textarea:focus {
-    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.4);
+/* Footer */
+.site-footer {
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 5rem;
 }

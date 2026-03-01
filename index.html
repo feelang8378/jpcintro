@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조종필 교수님 - 로또 번호 추천 서비스</title>
+    <title>조종필 교수님의 서재 - 오늘의 시</title>
     <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6865572083825402"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
     <button id="theme-toggle" class="theme-toggle">🌙 다크 모드</button>
-    <h1>🍀 조종필 교수님의 행운 발전소</h1>
-    <p>공부에 지친 학생들을 위한 소소한 행운 추첨</p>
+    <h1>🌿 조종필 교수님의 디지털 서재</h1>
+    <p>나태주 시인의 따뜻한 문장과 함께하는 일상</p>
 </header>
 
 <div class="container">
-    <section class="lotto-card">
-        <h3>오늘의 추천 번호</h3>
-        <p>버튼을 눌러 6개의 행운 숫자를 확인하세요!</p>
-        
-        <div class="ball-container" id="lotto-result">
-            <p style="color:#ccc;">번호를 생성해주세요</p>
+    <!-- 오늘의 시 섹션 -->
+    <section class="quote-card">
+        <div class="quote-header">
+            <span class="date-today" id="current-date">2026년 3월 1일</span>
+            <h3>오늘의 문장</h3>
         </div>
-
-        <button class="lotto-btn" onclick="generateLotto()">번호 추첨하기</button>
+        <div class="quote-content">
+            <p id="daily-quote">"자세히 보아야 예쁘다.<br>오래 보아야 사랑스럽다.<br>너도 그렇다."</p>
+            <cite id="quote-title">- 풀꽃, 나태주</cite>
+        </div>
     </section>
 
-    <section class="lotto-card inquiry-section" style="margin-top: 2rem;">
-        <h3>🤝 제휴 문의</h3>
-        <p>조종필 교수님과 함께하고 싶다면 메시지를 남겨주세요.</p>
-        <form action="https://formspree.io/f/mqedjzgv" method="POST" class="inquiry-form">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="성함 또는 단체명" required>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="이메일 주소" required>
-            </div>
-            <div class="form-group">
-                <textarea name="message" placeholder="문의 내용을 입력해주세요" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="lotto-btn">문의 보내기</button>
-        </form>
+    <!-- 프로필 섹션 -->
+    <section class="profile-card">
+        <div class="profile-info">
+            <h3>👨‍🏫 안녕하세요, 조종필입니다.</h3>
+            <p>
+                배움과 성장을 사랑하는 교육자 조종필입니다. <br>
+                복잡한 기술의 세계 속에서도 시 한 줄의 여유를 잃지 않기를 바라는 마음으로 
+                이 공간을 만들었습니다. 이곳에서 매일 배달되는 나태주 시인의 따뜻한 위로를 만나보세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section class="inquiry-section">
+        <div class="lotto-card">
+            <h3>💌 마음 전하기</h3>
+            <p>나누고 싶은 이야기나 문의사항이 있다면 남겨주세요.</p>
+            <form action="https://formspree.io/f/mqedjzgv" method="POST" class="inquiry-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="성함" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="이메일 주소" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="메시지를 입력해주세요" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="lotto-btn">메시지 보내기</button>
+            </form>
+        </div>
     </section>
 </div>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 조종필 교수님의 디지털 서재. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">매일 새로운 시와 명언으로 여러분을 찾아갑니다.</p>
+    </div>
+</footer>
 
 <script src="main.js"></script>
 </body>
