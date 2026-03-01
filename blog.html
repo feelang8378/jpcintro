@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈과 스포츠 - 조종필 교수님의 디지털 서재</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6865572083825402"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <button id="theme-toggle" class="theme-toggle">🌙 다크 모드</button>
+    <h1>🏀 눈과 스포츠: 승패를 결정짓는 시력</h1>
+    <p>스포츠 현장의 생생한 시력 관련 소식과 과학</p>
+    <nav style="margin-top: 1rem;">
+        <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">← 메인으로 돌아가기</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div id="blog-posts">
+        <!-- 블로그 포스트들이 여기에 생성됩니다 -->
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 조종필 교수님의 디지털 서재. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const blogData = [
+        { title: "2026년 MLB 개막: 라식 수술 후 홈런왕 등극한 스타들", date: "2026-02-15", category: "야구", content: "비시즌 동안 시력 교정을 마친 선수들이 놀라운 선구안을 보여주고 있습니다. 1.5 이상의 시력이 타구 판단에 미치는 영향..." },
+        { title: "손흥민의 '입체 시력' 회복 훈련법 공개", date: "2026-02-01", category: "축구", content: "안와골절 부상 이후 떨어진 입체감을 회복하기 위해 프리미어리그 팀들이 도입한 최첨단 비전 트레이닝 장비를 소개합니다." },
+        { title: "골프 여제들의 비밀: 그린 경사를 읽는 눈의 위치", date: "2026-01-20", category: "골프", content: "퍼팅 성공률을 높이기 위한 주시안(Dominant Eye) 확인법과 그린 리딩 시 시선 처리 기술." },
+        { title: "NBA 슈퍼스타들의 고글 착용 잔혹사", date: "2026-01-10", category: "농구", content: "최근 거친 몸싸움으로 인한 안구 부상이 늘어나며, 고글 착용이 단순한 보호를 넘어 하나의 스타일로 자리 잡고 있습니다." },
+        { title: "스마트 콘택트렌즈: 축구 선수의 시야에 데이터가?", date: "2025-12-28", category: "IT/스포츠", content: "실시간으로 동료의 위치와 심박수를 렌즈 위에 띄워주는 기술이 프로 테스트 단계에 진입했습니다." },
+        { title: "겨울 스포츠의 적, '설맹증' 예방하는 고글 선택법", date: "2025-12-15", category: "스키", content: "스키장에서의 자외선은 도심의 수 배에 달합니다. 눈 건강을 지키는 렌즈 투과율 가이드." },
+        { title: "F1 드라이버의 초인적인 동체시력 측정 결과", date: "2025-12-05", category: "모터스포츠", content: "시속 300km에서 코너를 확인하는 드라이버들의 반응 속도와 일반인의 차이는 어디서 오는가?" },
+        { title: "양궁 대표팀의 '눈 관리' 루틴 최초 공개", date: "2025-11-20", category: "양궁", content: "바람만큼 중요한 것이 눈의 피로도 관리입니다. 선수들이 경기 직전 사용하는 안구 근육 이완법." },
+        { title: "테니스 라켓보다 중요한 '볼 트래킹' 능력", date: "2025-11-10", category: "테니스", content: "빠르게 날아오는 공을 끝까지 보는 것이 아니라 '예측'하는 뇌와 눈의 협응 과정." },
+        { title: "이스포츠(eSports) 선수들의 VDT 증후군 비상", date: "2025-10-25", category: "e스포츠", content: "장시간 모니터 응시로 인한 안구 건조증이 경기력 저하로 이어지는 사례와 예방법." },
+        { title: "수영 선수의 시력을 앗아가는 수영장 소독제?", date: "2025-10-15", category: "수영", content: "강한 염소 성분이 각막에 미치는 영향과 올바른 수중 고글 착용법." },
+        { title: "스포츠용 고글 도수 가공의 최신 기술력", date: "2025-10-01", category: "일반", content: "어지러움 없는 곡면 렌즈 가공 기술이 비약적으로 발전하며 저시력 운동선수들의 선택 폭이 넓어졌습니다." },
+        { title: "콘택트렌즈 끼고 마라톤 해도 될까?", date: "2025-09-20", category: "러닝", content: "땀과 먼지로부터 눈을 보호하면서 렌즈를 안전하게 사용하는 러너들을 위한 팁." },
+        { title: "어린이 축구 교실, '시력 보호대' 착용 의무화 논란", date: "2025-09-10", category: "교육/스포츠", content: "성장기 어린이들의 안구 부상을 막기 위한 안전 장비 규정 강화 움직임." },
+        { title: "태권도 경기 중 콘택트렌즈 이탈 시 대처법", date: "2025-08-25", category: "격투기", content: "충격이 잦은 스포츠에서 렌즈 사용 시 주의사항과 대체 가능한 교정 방식." },
+        { title: "야간 경기 조명이 눈의 피로에 미치는 영향", date: "2025-08-15", category: "일반", content: "인공 조명 아래서의 대비 감도를 높여주는 스포츠 전용 색 필터 렌즈의 효과." },
+        { title: "야구 심판들의 시력 검사 결과와 오심의 상관관계", date: "2025-08-05", category: "야구", content: "스트라이크 존 판독의 정확도를 높이기 위한 심판 전용 시력 관리 프로그램 도입." },
+        { title: "배드민턴 셔틀콕에 의한 안구 파열 주의보", date: "2025-07-25", category: "배드민턴", content: "가장 빠른 구속을 자랑하는 셔틀콕, 안구 부상을 막기 위한 최소한의 안전 수칙." },
+        { title: "스포츠 비전 트레이닝 홈케어 기구 인기", date: "2025-07-10", category: "IT", content: "집에서도 동체시력을 키울 수 있는 VR 기반의 훈련 기구들이 시장에 쏟아지고 있습니다." },
+        { title: "노안을 극복하고 필드로 돌아온 전설의 선수들", date: "2025-07-01", category: "일반", content: "나이가 들어도 스포츠를 즐기기 위한 다초점 렌즈 활용법과 적응 기간 줄이는 법." }
+    ];
+
+    function renderPosts() {
+        const container = document.getElementById('blog-posts');
+        blogData.forEach(post => {
+            const article = document.createElement('article');
+            article.className = 'lotto-card';
+            article.style.textAlign = 'left';
+            article.style.marginBottom = '1.5rem';
+            article.innerHTML = `
+                <div style="font-size: 0.8rem; color: var(--main-color); margin-bottom: 0.5rem;">[${post.category}] ${post.date}</div>
+                <h3 style="margin-bottom: 0.8rem;">${post.title}</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.8;">${post.content}</p>
+                <button class="lotto-btn" style="padding: 5px 15px; font-size: 0.8rem; margin-top: 10px; width: auto;">자세히 읽기</button>
+            `;
+            container.appendChild(article);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderPosts);
+
+    // 테마 토글 (main.js 공유 가능하도록 복제 또는 연결)
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+</script>
+
+</body>
+</html>
